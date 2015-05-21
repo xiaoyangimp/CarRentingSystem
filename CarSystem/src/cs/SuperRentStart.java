@@ -50,6 +50,8 @@ public class SuperRentStart extends Application {
 			control.setStart(this);
 			
 			primaryStage.setScene(scene);
+			primaryStage.sizeToScene();
+			primaryStage.setResizable(false);
 			primaryStage.show();
 			
 		} catch (IOException e) {

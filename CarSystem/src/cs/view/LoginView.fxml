@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.geometry.*?>
@@ -9,7 +10,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs.view.LoginViewController">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" stylesheets="@../styling/login.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs.view.LoginViewController">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="106.0" />
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="204.0" minWidth="10.0" prefWidth="194.0" />
@@ -21,21 +22,49 @@
     <RowConstraints maxHeight="289.0" minHeight="10.0" prefHeight="261.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" GridPane.rowIndex="2">
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Password" GridPane.rowIndex="2">
          <GridPane.margin>
-            <Insets left="40.0" />
+            <Insets left="20.0" />
          </GridPane.margin>
+         <fill>
+            <LinearGradient endX="0.523809523809524" endY="0.6714285714285715" startX="0.2761904761904762" startY="0.22857142857142856">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+         <effect>
+            <InnerShadow color="#000000db" />
+         </effect>
       </Text>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="UserID:" GridPane.rowIndex="1">
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="UserID" GridPane.rowIndex="1">
          <GridPane.margin>
-            <Insets left="40.0" />
+            <Insets left="20.0" />
          </GridPane.margin>
+         <fill>
+            <LinearGradient endX="0.861904761904762" endY="0.6571428571428571" startX="0.21904761904761905" startY="0.0380952380952381">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font>
+         <effect>
+            <InnerShadow color="#000000db" />
+         </effect>
       </Text>
       <TextField fx:id="uid" maxWidth="150.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
       <PasswordField fx:id="pwd" maxWidth="150.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-      <Button fx:id="Login" mnemonicParsing="false" onAction="#submit" text="Login" GridPane.columnIndex="1" GridPane.rowIndex="3">
+      <Button fx:id="Login" mnemonicParsing="false" onAction="#submit" prefHeight="25.0" prefWidth="63.0" text="Login" GridPane.columnIndex="1" GridPane.rowIndex="3">
          <GridPane.margin>
-            <Insets left="60.0" />
+            <Insets bottom="40.0" left="60.0" />
          </GridPane.margin>
       </Button>
       <ImageView fx:id="iv" fitHeight="101.0" fitWidth="149.0" pickOnBounds="true" preserveRatio="true">

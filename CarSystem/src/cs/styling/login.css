@@ -1,0 +1,4 @@
+.root {
+	-fx-background-image: url("image/Login_background.jpg");
+	-fx-background-repeat: stretch;
+}
