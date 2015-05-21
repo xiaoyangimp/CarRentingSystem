@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="635.0" prefWidth="995.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs.view.EquipmentViewController">
+   <children>
+      <Text layoutX="53.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Equipment Info:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="53.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <ChoiceBox fx:id="loc" layoutX="186.0" layoutY="108.0" prefHeight="23.0" prefWidth="269.0" />
+      <TableView fx:id="tb" layoutX="53.0" layoutY="193.0" prefHeight="386.0" prefWidth="402.0">
+        <columns>
+          <TableColumn fx:id="branch" prefWidth="164.0" text="Branch" />
+          <TableColumn fx:id="equipment" prefWidth="157.0" text="Equipment" />
+            <TableColumn fx:id="quantity" text="Quantity" />
+        </columns>
+      </TableView>
+      <Text layoutX="489.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Equipment Management:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="489.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <ChoiceBox fx:id="loc2" layoutX="634.0" layoutY="108.0" prefHeight="23.0" prefWidth="242.0" />
+      <Text layoutX="489.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Equipment:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <ChoiceBox fx:id="eq" layoutX="634.0" layoutY="159.0" prefHeight="23.0" prefWidth="242.0" />
+      <Text layoutX="489.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="quant" layoutX="634.0" layoutY="209.0" />
+      <Button fx:id="update" layoutX="818.0" layoutY="209.0" mnemonicParsing="false" onAction="#update" text="Update" />
+      <Button fx:id="check" layoutX="53.0" layoutY="148.0" mnemonicParsing="false" onAction="#check" prefHeight="23.0" prefWidth="185.0" text="Check Current Stock" />
+      <PasswordField fx:id="pwd" layoutX="634.0" layoutY="395.0" prefHeight="23.0" prefWidth="242.0" />
+      <Text layoutX="489.0" layoutY="348.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Equipment Initialization:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="489.0" layoutY="416.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Button fx:id="init" layoutX="814.0" layoutY="461.0" mnemonicParsing="false" onAction="#init" text="Initialize" />
+      <Button fx:id="checktomorrow" layoutX="270.0" layoutY="148.0" mnemonicParsing="false" onAction="#checkTomorrow" prefHeight="23.0" prefWidth="185.0" text="Check Request Next Day" />
+   </children>
+</AnchorPane>

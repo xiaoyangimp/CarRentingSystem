@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="536.0" prefWidth="795.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs.view.EditCustomerController">
+   <children>
+      <AnchorPane layoutX="-20.0" layoutY="-23.0" prefHeight="635.0" prefWidth="995.0">
+         <children>
+            <Label layoutX="407.0" layoutY="26.0" text="Customer Details">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="86.0" text="Phone #: ">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="phonenum" layoutX="135.0" layoutY="84.0" prefHeight="23.0" prefWidth="321.0" />
+            <Button fx:id="check" layoutX="541.0" layoutY="84.0" mnemonicParsing="false" onAction="#check" text="Check Customer" />
+            <Label layoutX="28.0" layoutY="156.0" text="Name: ">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="201.0" text="Address:">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="247.0" text="City:">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="name" layoutX="135.0" layoutY="154.0" prefHeight="23.0" prefWidth="321.0" />
+            <TextField fx:id="address" layoutX="135.0" layoutY="201.0" prefHeight="23.0" prefWidth="321.0" />
+            <TextField fx:id="city" layoutX="135.0" layoutY="245.0" prefHeight="23.0" prefWidth="321.0" />
+            <Label layoutX="32.0" layoutY="334.0" text="SuperMember:">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="sm" layoutX="211.0" layoutY="340.0" mnemonicParsing="false" />
+            <Button fx:id="add" layoutX="251.0" layoutY="545.0" mnemonicParsing="false" onAction="#add" text="Add Customer" />
+            <Label fx:id="info" layoutX="32.0" layoutY="425.0" prefHeight="28.0" prefWidth="941.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="update" layoutX="655.0" layoutY="546.0" mnemonicParsing="false" onAction="#update" prefHeight="23.0" prefWidth="100.0" text="Update" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

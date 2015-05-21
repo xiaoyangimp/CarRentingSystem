@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="635.0" prefWidth="995.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs.view.CancelReservationViewController">
+   <children>
+      <Text layoutX="46.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Check and Cancel Reservation">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="cntf" layoutX="402.0" layoutY="111.0" prefHeight="23.0" prefWidth="272.0" />
+      <RadioButton fx:id="cn" layoutX="76.0" layoutY="114.0" mnemonicParsing="false" />
+      <Text layoutX="97.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirmation Number:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <RadioButton fx:id="pnsd" layoutX="76.0" layoutY="156.0" mnemonicParsing="false" />
+      <Text layoutX="97.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number and dates">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="97.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="96.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start date:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="pntf" layoutX="402.0" layoutY="199.0" prefHeight="23.0" prefWidth="272.0" />
+      <DatePicker fx:id="st" layoutX="402.0" layoutY="248.0" />
+      <Button fx:id="check" layoutX="784.0" layoutY="248.0" mnemonicParsing="false" onAction="#check" prefHeight="23.0" prefWidth="82.0" text="Check" />
+      <Button fx:id="cancel" layoutX="783.0" layoutY="552.0" mnemonicParsing="false" onAction="#cancel" prefHeight="23.0" prefWidth="82.0" text="Cancel" />
+      <TableView fx:id="recordtable" layoutX="90.0" layoutY="307.0" prefHeight="268.0" prefWidth="625.0">
+        <columns>
+          <TableColumn fx:id="vehicleid" prefWidth="75.0" text="Vehicle ID" />
+          <TableColumn fx:id="sdate" prefWidth="150.0" text="Start Date" />
+            <TableColumn fx:id="rdate" minWidth="0.0" prefWidth="150.0" text="Estimated Return Date" />
+            <TableColumn fx:id="cnumber" prefWidth="150.0" text="Confirmation Number" />
+            <TableColumn fx:id="vtype" prefWidth="101.0" text="Vehicle Type" />
+        </columns>
+      </TableView>
+      <Label layoutX="747.0" layoutY="493.0" prefHeight="28.0" prefWidth="128.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="checkall" layoutX="784.0" layoutY="199.0" mnemonicParsing="false" onAction="#checkall" prefHeight="23.0" prefWidth="82.0" text="Check All" />
+   </children>
+</AnchorPane>

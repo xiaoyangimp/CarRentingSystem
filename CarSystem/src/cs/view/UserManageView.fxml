@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="635.0" prefWidth="995.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs.view.UserManageViewController">
+   <children>
+      <Text layoutX="70.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add User:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="70.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Remove User:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="70.0" layoutY="404.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change User password:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="136.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User ID:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="136.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Password:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="138.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User ID:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="136.0" layoutY="463.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User ID:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="136.0" layoutY="524.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Password:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="addid" layoutX="360.0" layoutY="109.0" prefHeight="23.0" prefWidth="292.0" />
+      <TextField fx:id="addpwd" layoutX="360.0" layoutY="165.0" prefHeight="23.0" prefWidth="292.0" />
+      <TextField fx:id="removeid" layoutX="360.0" layoutY="321.0" prefHeight="23.0" prefWidth="292.0" />
+      <TextField fx:id="changeid" layoutX="360.0" layoutY="443.0" prefHeight="23.0" prefWidth="292.0" />
+      <TextField fx:id="changepwd" layoutX="360.0" layoutY="504.0" prefHeight="23.0" prefWidth="292.0" />
+      <Button fx:id="add" layoutX="784.0" layoutY="217.0" mnemonicParsing="false" onAction="#addUser" prefHeight="23.0" prefWidth="92.0" text="Add User" />
+      <Button fx:id="remove" layoutX="784.0" layoutY="321.0" mnemonicParsing="false" onAction="#removeUser" text="Remove User" />
+      <Button fx:id="change" layoutX="784.0" layoutY="504.0" mnemonicParsing="false" onAction="#changePwd" prefHeight="23.0" prefWidth="92.0" text="Commit" />
+      <Text layoutX="136.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Type:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <ChoiceBox fx:id="addtype" layoutX="360.0" layoutY="217.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

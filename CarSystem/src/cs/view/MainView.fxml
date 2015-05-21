@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs.view.MainViewController">
+   <children>
+      <AnchorPane prefHeight="155.0" prefWidth="1200.0" AnchorPane.leftAnchor="0.0">
+         <children>
+            <Text layoutX="943.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User:">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Text layoutX="943.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Authority:">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Label fx:id="user" layoutX="1059.0" layoutY="55.0" text="Label">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="pos" layoutX="1059.0" layoutY="89.0" text="Label">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="logout" layoutX="821.0" layoutY="92.0" mnemonicParsing="false" onAction="#close" prefHeight="23.0" prefWidth="89.0" text="Log out" />
+            <ImageView fx:id="iv" fitHeight="117.0" fitWidth="770.0" layoutX="7.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/cs/view/images/superRent.png" />
+               </image></ImageView>
+         </children>
+      </AnchorPane>
+      <Group fx:id="leftgroup" layoutY="165.0" />
+      <Group fx:id="rightgroup" layoutX="205.0" layoutY="165.0" />
+   </children>
+</AnchorPane>

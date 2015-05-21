@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+<?language javascript?>
+
+<AnchorPane prefHeight="635.0" prefWidth="995.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs.view.FleetViewController">
+    <children>
+      <TabPane fx:id="Tab_Menu" prefHeight="635.0" prefWidth="995.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="View_Car" text="View Vehicle">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="319.0" prefWidth="457.0">
+                     <children>
+                          <Label fx:id="label" layoutX="35.0" layoutY="22.0" minHeight="16" minWidth="69" text="Type" />
+                        <ComboBox fx:id="car_type" layoutX="97.0" layoutY="17.0" onAction="#type_change" prefHeight="26.0" prefWidth="115.0">
+                           <items>
+                               <FXCollections fx:factory="observableArrayList">
+                               <String fx:value="all" />
+                                
+                             </FXCollections>   
+                           </items>
+                           <value>all</value>
+                        </ComboBox>
+                        <ComboBox fx:id="type_class" layoutX="455.0" layoutY="18.0" prefHeight="26.0" prefWidth="115.0">
+                            <items>
+                               <FXCollections fx:factory="observableArrayList">
+                               <String fx:value="all" />
+                             </FXCollections>
+                           </items>
+                           <value>all</value>
+                        </ComboBox>
+                        <ComboBox fx:id="branch" layoutX="97.0" layoutY="64.0" prefHeight="26.0" prefWidth="115.0">
+                        <items>
+                               <FXCollections fx:factory="observableArrayList">
+                               <String fx:value="all" />
+                             </FXCollections>
+                           </items>
+                           <value>all</value>
+                       </ComboBox>
+                        <Label fx:id="label2" layoutX="35.0" layoutY="69.0" minHeight="16" minWidth="69" text="Location" />
+                        <ComboBox fx:id="year" layoutX="455.0" layoutY="65.0" prefHeight="26.0" prefWidth="115.0">
+                        <items>
+                               <FXCollections fx:factory="observableArrayList">
+                               <String fx:value="all" />
+                               <String fx:value="2006" />
+                               <String fx:value="2007" />
+                               <String fx:value="2008" />
+                               <String fx:value="2009" />
+                               <String fx:value="2010" />
+                               <String fx:value="2011" />
+                               <String fx:value="2012" />
+                               <String fx:value="2013" />
+                               <String fx:value="2014" />
+                               <String fx:value="2015" />
+                             </FXCollections>
+                           </items>
+                           <value>all</value>
+                       </ComboBox>
+                        <Button fx:id="submit" layoutX="770.0" layoutY="43.0" mnemonicParsing="false" onAction="#search" text="Search" />
+                        <Label fx:id="label1" layoutX="365.0" layoutY="21.0" minHeight="16" minWidth="69" text="Class" />
+                        <Label fx:id="label11" layoutX="365.0" layoutY="70.0" minHeight="16" minWidth="69" text="Year(before)" />
+                        <TableView fx:id="table" layoutX="57.0" layoutY="116.0" prefHeight="373.0" prefWidth="873.0">
+                          <columns>
+                            <TableColumn fx:id="vid" prefWidth="75.0" text="ID" />
+                            <TableColumn fx:id="type" prefWidth="145.0" text="Type" />
+                              <TableColumn fx:id="date" prefWidth="166.0" text="Acquire Date" />
+                              <TableColumn fx:id="bid" prefWidth="191.0" text="Location" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="sell" layoutX="456.0" layoutY="535.0" mnemonicParsing="false" onAction="#sell" text="put for sale" />
+                        
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="Add_car" text="Add Vehicle">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ComboBox fx:id="add_type" layoutX="376.0" layoutY="53.0" onAction="#addtype_change" prefHeight="35.0" prefWidth="135.0">
+                           
+                         </ComboBox>
+                        <ComboBox fx:id="add_loc" layoutX="145.0" layoutY="192.0" prefHeight="31.0" prefWidth="135.0" />
+                        <DatePicker fx:id="add_date" layoutX="376.0" layoutY="191.0" prefHeight="34.0" prefWidth="139.0" />
+                        <Label layoutX="307.0" layoutY="55.0" prefHeight="30.0" prefWidth="52.0" text="Type">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="61.0" layoutY="195.0" prefHeight="30.0" prefWidth="79.0" text="Location">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="58.0" layoutY="125.0" prefHeight="30.0" prefWidth="52.0" text="Class">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="307.0" layoutY="194.0" prefHeight="30.0" prefWidth="52.0" text="Date">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="264.0" layoutY="274.0" mnemonicParsing="false" onAction="#add_vehicle" prefHeight="36.0" prefWidth="95.0" text="Add">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                        <ComboBox fx:id="add_class" layoutX="144.0" layoutY="124.0" prefHeight="32.0" prefWidth="136.0" />
+                        <TextField fx:id="add_id" layoutX="146.0" layoutY="53.0" prefHeight="34.0" prefWidth="132.0" />
+                        <Label layoutX="58.0" layoutY="57.0" prefHeight="26.0" prefWidth="84.0" text="ID(xxxxxx)">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="307.0" layoutY="125.0" prefHeight="30.0" prefWidth="52.0" text="Odor">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="add_ordor" layoutX="378.0" layoutY="125.0" prefHeight="34.0" prefWidth="132.0" />
+                           
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab onSelectionChanged="#View_rate" text="Set Rental Rate">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="r_table" layoutX="44.0" layoutY="59.0" prefHeight="453.0" prefWidth="894.0">
+                          <columns>
+                            <TableColumn fx:id="r_type" prefWidth="75.0" text="Type" />
+                            <TableColumn fx:id="w_rate" prefWidth="92.0" text="Weekly Rate " />
+                              <TableColumn fx:id="d_rate" prefWidth="75.0" text="Day Rate" />
+                              <TableColumn fx:id="h_rate" prefWidth="75.0" text="Hour Rate" />
+                              <TableColumn fx:id="k_rate" prefWidth="108.0" text="Kilometer Rate" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="462.0" layoutY="536.0" mnemonicParsing="false" onAction="#rate_update" text="Update" />
+                        <Label layoutX="421.0" layoutY="29.0" text="Retal Rate Table">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab onSelectionChanged="#ViewSale" text="Sell Vehicle">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="sale_table" layoutX="62.0" layoutY="91.0" prefHeight="396.0" prefWidth="897.0">
+                          <columns>
+                            <TableColumn fx:id="sale_id" prefWidth="84.0" text="VID" />
+                            <TableColumn fx:id="sale_price" prefWidth="106.0" text="Price" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="397.0" layoutY="43.0" prefHeight="30.0" prefWidth="201.0" text="On Sale Vehicle List">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="479.0" layoutY="528.0" mnemonicParsing="false" onAction="#sold" text="Sell" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+    </children>
+</AnchorPane>

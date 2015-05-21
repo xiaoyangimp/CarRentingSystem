@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+
+<AnchorPane id="AnchorPane" fx:id="report" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs.view.ReportController">
+   <children>
+      <ComboBox fx:id="report_type" layoutX="317.0" layoutY="105.0" prefHeight="39.0" prefWidth="129.0">
+          <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Rent" />
+                    <String fx:value="Return" />    
+                </FXCollections>
+          </items>
+        <value>Rent</value>
+      </ComboBox>
+      <Label layoutX="164.0" layoutY="105.0" prefHeight="39.0" prefWidth="115.0" text="Report Type">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="229.0" layoutY="264.0" mnemonicParsing="false" onAction="#report" text="Generate">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="164.0" layoutY="187.0" prefHeight="39.0" prefWidth="115.0" text="Branch">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="branch" layoutX="317.0" layoutY="187.0" prefHeight="39.0" prefWidth="129.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="635.0" prefWidth="995.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs.view.NewRentInformationViewController">
+   <children>
+      <Text layoutX="89.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Name:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="cname" layoutX="345.0" layoutY="79.0" prefHeight="39.0" prefWidth="320.0" />
+      <Text layoutX="89.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Phone#:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="cphonenum" layoutX="345.0" layoutY="129.0" prefHeight="39.0" prefWidth="320.0" />
+      <Label layoutX="89.0" layoutY="185.0" text="Address:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="90.0" layoutY="236.0" text="City:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="86.0" layoutY="289.0" text="License#:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="86.0" layoutY="340.0" text="Credit Card #:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="86.0" layoutY="390.0" text="Expiry Date:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="address" layoutX="345.0" layoutY="183.0" prefHeight="39.0" prefWidth="320.0" />
+      <TextField fx:id="city" layoutX="345.0" layoutY="234.0" />
+      <TextField fx:id="license" layoutX="345.0" layoutY="287.0" prefHeight="39.0" prefWidth="320.0" />
+      <TextField fx:id="card" layoutX="345.0" layoutY="338.0" prefHeight="39.0" prefWidth="320.0" />
+      <DatePicker fx:id="expiry" layoutX="345.0" layoutY="387.0" />
+      <Label layoutX="86.0" layoutY="24.0" text="Customer Information">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="errorName" layoutX="688.0" layoutY="85.0" textFill="RED" />
+      <Label fx:id="errorPhone" layoutX="688.0" layoutY="135.0" textFill="RED" />
+      <Label fx:id="errorAddress" layoutX="688.0" layoutY="189.0" textFill="RED" />
+      <Label fx:id="errorCity" layoutX="688.0" layoutY="240.0" textFill="RED" />
+      <Label fx:id="errorLicense" layoutX="688.0" layoutY="293.0" textFill="RED" />
+      <Label fx:id="errorCard" layoutX="688.0" layoutY="344.0" textFill="RED" />
+      <Label fx:id="errorExp" layoutX="688.0" layoutY="394.0" textFill="RED" />
+      <Label fx:id="info" layoutX="90.0" layoutY="501.0" prefHeight="28.0" prefWidth="803.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="reserve" layoutX="446.0" layoutY="548.0" mnemonicParsing="false" onAction="#makeRent" text="Rent" />
+   </children>
+</AnchorPane>

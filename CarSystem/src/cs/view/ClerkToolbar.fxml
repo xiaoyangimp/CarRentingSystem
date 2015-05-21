@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="635.0" prefWidth="195.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs.view.ClerkToolbarController">
+   <children>
+      <Button fx:id="reserveV" layoutX="22.0" layoutY="30.0" mnemonicParsing="false" onAction="#reserve" prefHeight="30.0" prefWidth="150.0" text="Reserve" />
+      <Button fx:id="rentV" layoutX="22.0" layoutY="90.0" mnemonicParsing="false" onAction="#rent" prefHeight="30.0" prefWidth="150.0" text="Rent" />
+      <Button fx:id="returnV" layoutX="22.0" layoutY="150.0" mnemonicParsing="false" onAction="#returnv" prefHeight="30.0" prefWidth="150.0" text="Return" />
+      <Button fx:id="cancelReservation" layoutX="22.0" layoutY="210.0" mnemonicParsing="false" onAction="#cancelReservation" prefHeight="30.0" prefWidth="150.0" text="Check and Cancel" />
+      <Button fx:id="clerkq" layoutX="22.0" layoutY="270.0" mnemonicParsing="false" onAction="#clerkQuery" prefHeight="30.0" prefWidth="150.0" text="Clerk Query" />
+      <Button fx:id="equipmentmanage" layoutX="22.0" layoutY="330.0" mnemonicParsing="false" onAction="#equipmentManage" prefHeight="30.0" prefWidth="150.0" text="Equipment" />
+      <Button fx:id="customer" layoutX="22.0" layoutY="390.0" mnemonicParsing="false" onAction="#customer" prefHeight="30.0" prefWidth="150.0" text="Customer info" />
+   </children>
+</AnchorPane>

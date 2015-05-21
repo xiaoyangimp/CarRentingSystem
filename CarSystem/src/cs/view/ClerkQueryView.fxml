@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="635.0" prefWidth="995.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs.view.ClerkQueryViewController">
+   <children>
+      <Text layoutX="48.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Clerk Query:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="48.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Category:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="48.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Location:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <ChoiceBox fx:id="category" layoutX="193.0" layoutY="101.0" prefHeight="23.0" prefWidth="234.0" />
+      <Text layoutX="475.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="From:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="475.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <DatePicker fx:id="from" layoutX="569.0" layoutY="101.0" />
+      <DatePicker fx:id="to" layoutX="569.0" layoutY="152.0" />
+      <Button fx:id="checkavailable" layoutX="811.0" layoutY="54.0" mnemonicParsing="false" onAction="#checkavail" prefHeight="23.0" prefWidth="131.0" text="Check Availability" />
+      <Button fx:id="checkoverdue" layoutX="811.0" layoutY="101.0" mnemonicParsing="false" onAction="#checkod" prefHeight="23.0" prefWidth="131.0" text="Check Overdue" />
+      <Button fx:id="checkforsale" layoutX="811.0" layoutY="152.0" mnemonicParsing="false" onAction="#checkfs" prefHeight="23.0" prefWidth="131.0" text="Check Forsale" />
+      <TableView fx:id="tb" layoutX="54.0" layoutY="208.0" prefHeight="389.0" prefWidth="887.0">
+         <columns>
+            <TableColumn fx:id="vehicleid" prefWidth="134.0" text="Vehicle ID" />
+            <TableColumn fx:id="branch" prefWidth="145.0" text="Branch" />
+            <TableColumn fx:id="type" prefWidth="135.0" text="Type" />
+            <TableColumn fx:id="odoread" prefWidth="146.0" text="Odormeter read" />
+            <TableColumn fx:id="adate" prefWidth="176.0" text="Acquire date" />
+            <TableColumn fx:id="saleprice" prefWidth="150.0" text="For Sale Price" />
+         </columns>
+      </TableView>
+      <ChoiceBox fx:id="loc" layoutX="193.0" layoutY="152.0" prefHeight="23.0" prefWidth="234.0" />
+   </children>
+</AnchorPane>

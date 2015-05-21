@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="635.0" prefWidth="195.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs.view.ManagerToolbarController">
+   <children>
+      <Button fx:id="report" layoutX="22.0" layoutY="90.0" mnemonicParsing="false" onAction="#report" prefHeight="30.0" prefWidth="150.0" text="Report" />
+      <Button fx:id="managefleet" layoutX="23.0" layoutY="30.0" mnemonicParsing="false" onAction="#manageFleet" prefHeight="30.0" prefWidth="150.0" text="Manage Fleet" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="509.0" prefWidth="977.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs.view.ReturnViewController">
+   <children>
+      <Label fx:id="datelabel" layoutX="13.0" layoutY="55.0" text="ReturnDate:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="returndate" layoutX="176.0" layoutY="56.0" prefHeight="26.0" prefWidth="132.0" />
+      <Label fx:id="odometerlabel" layoutX="13.0" layoutY="126.0" text="Odometer:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="odometertextfield" layoutX="176.0" layoutY="127.0" prefHeight="26.0" prefWidth="76.0" />
+      <Label fx:id="kmlabel" layoutX="267.0" layoutY="126.0" text="km">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="paymentlabel" layoutX="13.0" layoutY="320.0" text="Payment Methods:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="pointslabel" layoutX="13.0" layoutY="241.0" prefHeight="28.0" prefWidth="195.0" text="Available Points:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="pointswantredeem" layoutX="176.0" layoutY="280.0" prefHeight="26.0" prefWidth="84.0" />
+      <Button fx:id="redeembutton" layoutX="279.0" layoutY="282.0" mnemonicParsing="false" onAction="#redeem" text="Redeem" />
+      <CheckBox fx:id="roadstarcheckbox" layoutX="13.0" layoutY="200.0" mnemonicParsing="false" onAction="#CheckRoadStar" text="Road Star">
+         <font>
+            <Font size="19.0" />
+         </font></CheckBox>
+      <Button fx:id="calculationbutton" layoutX="56.0" layoutY="462.0" mnemonicParsing="false" onAction="#calculatefee" text="Calculate" />
+      <Label fx:id="hourlabel" layoutX="13.0" layoutY="91.0" prefHeight="28.0" prefWidth="145.0" text="ReturnHour:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="returnhour" layoutX="176.0" layoutY="93.0" prefHeight="23.0" prefWidth="72.0" />
+      <Label fx:id="platelabel" layoutX="14.0" layoutY="18.0" prefHeight="28.0" prefWidth="168.0" text="PlateNumber:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="platenumbertextfield" layoutX="176.0" layoutY="18.0" prefHeight="26.0" prefWidth="87.0" />
+      <ChoiceBox fx:id="pay_type" layoutX="242.0" layoutY="321.0" prefHeight="26.0" prefWidth="95.0" />
+      <TableView fx:id="return_info" layoutX="354.0" layoutY="14.0" prefHeight="97.0" prefWidth="623.0">
+        <columns>
+          <TableColumn fx:id="branch_id" prefWidth="74.04057312011719" text="branch_id" />
+            <TableColumn fx:id="customer_name" prefWidth="113.0" text="customer_name" />
+            <TableColumn fx:id="customer_phone" prefWidth="120.0" text="Cphonenum" />
+            <TableColumn fx:id="cardnum" prefWidth="99.4808349609375" text="Cardnum" />
+            <TableColumn fx:id="Expiredate" prefWidth="109.5191650390625" text="Expiredate" />
+          <TableColumn fx:id="PlateNum" prefWidth="111.95941162109375" text="PlateNum" />
+        </columns>
+      </TableView>
+      <Button fx:id="record" layoutX="190.0" layoutY="462.0" mnemonicParsing="false" onAction="#updatedb" text="Return" />
+      <Label fx:id="tankstatus" layoutX="13.0" layoutY="161.0" text="Tank Status">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tankstatustextfield" layoutX="176.0" layoutY="162.0" prefHeight="26.0" prefWidth="42.0" />
+      <Label fx:id="tankstatusfull" layoutX="251.0" layoutY="161.0" text="Full">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tankfulltextfield" layoutX="299.0" layoutY="162.0" prefHeight="26.0" prefWidth="42.0" />
+      <Label fx:id="Llable" layoutX="227.0" layoutY="161.0" prefHeight="28.0" prefWidth="17.0" text="L">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="Llable1" layoutX="351.0" layoutY="161.0" prefHeight="28.0" prefWidth="17.0" text="L">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="available_points" layoutX="222.0" layoutY="235.0" prefHeight="39.0" prefWidth="76.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="gridpane" layoutX="389.0" layoutY="119.0" prefHeight="374.0" prefWidth="568.0" />
+      <Label fx:id="currerentbranch" layoutX="13.0" layoutY="425.0" prefHeight="28.0" prefWidth="179.0" text="To Branch:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="branchid" layoutX="176.0" layoutY="426.0" prefHeight="26.0" prefWidth="69.0" />
+      <Button fx:id="branchconfirm" layoutX="279.0" layoutY="428.0" mnemonicParsing="false" onAction="#BranchConfirm" text="Confirm" />
+      <Button fx:id="platenumberconfirm" layoutX="279.0" layoutY="20.0" mnemonicParsing="false" onAction="#getCarInfo" text="Confirm" />
+      <Button fx:id="checkdatehour" layoutX="279.0" layoutY="93.0" mnemonicParsing="false" onAction="#checkdatehour" text="Confirm" />
+      <Button fx:id="Odometerconfirm" layoutX="315.0" layoutY="129.0" mnemonicParsing="false" onAction="#Odometerconfirm" text="Confirm" />
+      <Button fx:id="tankstatusbutton" layoutX="279.0" layoutY="201.0" mnemonicParsing="false" onAction="#tankstatusconfirm" text="Confirm" />
+      <Label fx:id="pointslabel1" layoutX="13.0" layoutY="279.0" prefHeight="28.0" prefWidth="95.0" text="Points:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="paymentmethod" layoutX="279.0" layoutY="394.0" mnemonicParsing="false" onAction="#paymentmethod" prefHeight="26.0" prefWidth="70.0" text="Confirm" />
+      <Label fx:id="paymentlabel1" layoutX="13.0" layoutY="393.0" text="Card Number:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="cardnumber" layoutX="176.0" layoutY="394.0" prefHeight="26.0" prefWidth="84.0" />
+      <Button fx:id="paymentmethod1" layoutX="279.0" layoutY="354.0" mnemonicParsing="false" onAction="#paymethod" prefHeight="26.0" prefWidth="72.0" text="Confirm" />
+   </children>
+</AnchorPane>
